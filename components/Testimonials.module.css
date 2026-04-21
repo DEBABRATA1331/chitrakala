@@ -1,0 +1,115 @@
+.section {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.header { text-align: center; margin-bottom: 64px; }
+
+/* Marquee */
+.marqueeWrapper {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+  padding: 12px 0;
+}
+.marqueeTrack:hover { animation-play-state: paused; }
+
+/* Card */
+.card {
+  background: rgba(255, 240, 190, 0.03);
+  border: 1px solid rgba(245, 158, 11, 0.1);
+  border-radius: 20px;
+  padding: 28px 24px;
+  width: 320px;
+  flex-shrink: 0;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card:hover {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 40px rgba(245,158,11,0.12), 0 16px 40px rgba(0,0,0,0.4);
+  transform: translateY(-4px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stars { display: flex; gap: 2px; }
+
+.text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(210, 196, 175, 0.85);
+  line-height: 1.78;
+  font-style: italic;
+  flex: 1;
+}
+
+.author { display: flex; align-items: center; gap: 12px; }
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0C0904;
+  flex-shrink: 0;
+}
+
+.name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #FAF7F2; }
+.role { font-family: 'DM Sans', sans-serif; font-size: 12px; color: rgba(175, 160, 144, 0.6); }
+
+/* Summary badge */
+.summary { display: flex; justify-content: center; margin-top: 56px; }
+
+.summaryInner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.05);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: 20px;
+  padding: 20px 48px;
+  backdrop-filter: blur(16px);
+}
+
+.summaryStars { display: flex; align-items: center; gap: 8px; }
+.summaryRating {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #F59E0B;
+}
+.summaryText {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(175, 160, 144, 0.7);
+}
+
+@media (max-width: 640px) {
+  .section { padding: 80px 0; }
+  .card { width: 280px; padding: 22px 18px; }
+}

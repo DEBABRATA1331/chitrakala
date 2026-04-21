@@ -1,0 +1,221 @@
+.pricing {
+  padding: 100px 0;
+  position: relative;
+}
+
+.pricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header .section-subtitle {
+  margin: 0 auto;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+/* Card */
+.card {
+  position: relative;
+  background: rgba(13, 21, 38, 0.7);
+  border: 1px solid rgba(26, 37, 64, 0.8);
+  border-radius: 22px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(12px);
+}
+
+.card:hover {
+  border-color: rgba(0, 174, 239, 0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+/* Popular Card */
+.popular {
+  border-color: rgba(0, 174, 239, 0.5);
+  background: linear-gradient(180deg, rgba(0, 174, 239, 0.05) 0%, rgba(13, 21, 38, 0.8) 100%);
+  transform: translateY(-8px);
+  box-shadow: 0 0 60px rgba(0, 174, 239, 0.12), 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.popular:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 0 80px rgba(0, 174, 239, 0.18), 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Popular Badge */
+.popularBadge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: linear-gradient(135deg, #00AEEF, #0075C2);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 5px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0, 174, 239, 0.4);
+}
+
+/* Card Top */
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.planIcon {
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.planName {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #E8EDF5;
+}
+
+.planTagline {
+  font-size: 13px;
+  color: #8892A4;
+}
+
+.priceWrap {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 38px;
+  font-weight: 900;
+  color: #00AEEF;
+  line-height: 1;
+}
+
+.priceMeta {
+  font-size: 12px;
+  color: #606880;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(26, 37, 64, 1), transparent);
+}
+
+/* Features */
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #A0AABF;
+  line-height: 1.4;
+}
+
+.checkIcon {
+  color: #00E676;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.crossIcon {
+  color: #404860;
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.notIncluded {
+  opacity: 0.4;
+}
+
+/* Plan CTA */
+.planCta {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Custom Quote */
+.customQuote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 48px;
+}
+
+.customQuote p {
+  font-size: 14px;
+  color: #8892A4;
+}
+
+.customLink {
+  color: #FFD700;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.customLink:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .popular {
+    transform: none;
+  }
+
+  .popular:hover {
+    transform: translateY(-6px);
+  }
+
+  .pricing {
+    padding: 70px 0;
+  }
+}
